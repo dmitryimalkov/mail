@@ -1,0 +1,38 @@
+json = {
+  "parentId": "e6da0715-81b9-4c5d-8580-cc7356b7e04b",
+  "service": "custom-service",
+  "personProfileIds": ["9ae5cfeb-0fba-4914-a643-d44732f16096"],
+  "code": "CUSTOM",
+  "email": {
+  "emailAddresses": ["dimalkov@sberbank.ru"],
+  "version": "1",
+  "values": {
+  "customTitle": "Тест Пульс",
+  "customBody": "Тестовое описание",
+  "link": "link",
+  "endDate": "Test endDate"
+  }
+  }
+  };
+   
+   
+  fetch("https://pprcard-service.pulse-hr.ru/api-web/spine-notification-controller/manual/v4", {
+  "headers": {
+  "content-type": "application/json",
+  "accept-language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "hrp-device-type": "web",
+  "sec-ch-ua": "\"Google Chrome\";v=\"105\", \"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"105\"",
+  "sec-ch-ua-mobile": "?0",
+  "sec-ch-ua-platform": "\"macOS\"",
+  "sec-fetch-dest": "empty",
+  "sec-fetch-mode": "cors",
+  "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://pprcard-service.pulse-hr.ru/platform/dashboard",
+  "referrerPolicy": "strict-origin-when-cross-origin",
+  "body": JSON.stringify(json),
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "include"
+  }) .then(res => res.json())
+  .then(console.log);  
