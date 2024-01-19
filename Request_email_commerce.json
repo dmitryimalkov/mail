@@ -1,7 +1,7 @@
 json = {
   "parentId": "e6da0715-81b9-4c5d-8580-cc7356b7e04b",
   "service": "custom-service",
-  "personProfileIds": ["9ae5cfeb-0fba-4914-a643-d44732f16096"],
+  "personProfileIds": ["5bfc6e67-8747-43d1-a53b-aca0f0c4b2c8"],
   "code": "CUSTOM",
   "email": {
   "emailAddresses": ["dimalkov@sberbank.ru"],
@@ -16,7 +16,7 @@ json = {
   };
    
    
-  fetch("https://pprcard-service.pulse-hr.ru/api-web/spine-notification-controller/manual/v4", {
+  fetch("https://veb-service.pulse-hr.ru/api-web/spine-notification-controller/manual/v4", {
   "headers": {
   "content-type": "application/json",
   "accept-language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
@@ -28,7 +28,7 @@ json = {
   "sec-fetch-mode": "cors",
   "sec-fetch-site": "same-origin"
   },
-  "referrer": "https://pprcard-service.pulse-hr.ru/platform/dashboard",
+  "referrer": "https://veb-service.pulse-hr.ru/platform/dashboard",
   "referrerPolicy": "strict-origin-when-cross-origin",
   "body": JSON.stringify(json),
   "method": "POST",
