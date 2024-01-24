@@ -16,7 +16,7 @@ json = {
   };
    
    
-  fetch("https://veb-service.pulse-hr.ru/api-web/spine-notification-controller/manual/v4", {
+  fetch("https://aloqabank-service.pulse-hr.ru/api-web/spine-notification-controller/manual/v4", {
   "headers": {
   "content-type": "application/json",
   "accept-language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
@@ -28,7 +28,7 @@ json = {
   "sec-fetch-mode": "cors",
   "sec-fetch-site": "same-origin"
   },
-  "referrer": "https://veb-service.pulse-hr.ru/platform/dashboard",
+  "referrer": "https://aloqabank-service.pulse-hr.ru/platform/dashboard",
   "referrerPolicy": "strict-origin-when-cross-origin",
   "body": JSON.stringify(json),
   "method": "POST",
