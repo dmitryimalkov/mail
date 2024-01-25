@@ -3,12 +3,12 @@ json = {
   "subject" : "проверка релиза",
   "body" : "2292293805855098",
   "startTime" : "2024-03-12T13:33:00+03:00",
-  "requiredAttendees" : ["dimalkov@sberbank.ru"],
+  "requiredAttendees" : ["evlgapeshin@sberbank.ru"],
   "optionalAttendees" : [],
   "duration" : "02:00:00",
   "onBehalf": "false"
 };
-fetch("https://brew4ru-service.pulse-hr.ru/api-web/spine-notification-calendar/manual/v3/meetings", {
+fetch("https://metropolisgroup-service.pulse-hr.ru/api-web/spine-notification-calendar/manual/v3/meetings", {
   "headers": {
     "content-type": "application/json",
     "accept-language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
