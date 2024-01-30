@@ -1,0 +1,38 @@
+json = {
+    "parentId": "d03b90ff-d0d1-4f4b-b716-632023061403",
+    "service": "сервис",
+    "personProfileIds": ["8579ccb2-7443-49ff-8f6c-2880bbcb2aa9"],
+    "code": "CUSTOM",
+    "email": {
+        "multiCompanyEmailAddresses": {"sbercity": ["dimalkov@sberbank.ru"]},
+        "version": "1",
+        "values": {
+            "customTitle": "sbercity", 
+            "customBody": "customBody development", 
+            "link": "link", 
+            "endDate": "Test endDate",
+        }
+    }
+};
+   
+   
+   
+fetch("https://sber-service.pulse-hr.ru/api-web/spine-notification-controller/manual/v4", {
+  "headers": {
+    "content-type": "application/json",
+    "accept-language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+    "hrp-device-type": "web",
+    "sec-ch-ua": "\"Google Chrome\";v=\"105\", \"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"105\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"macOS\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrerPolicy": "strict-origin-when-cross-origin",
+  "body": JSON.stringify(json),
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "include"
+}) .then(res => res.json())
+  .then(console.log);
